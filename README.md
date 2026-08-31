@@ -36,7 +36,7 @@
 
 #### 2) 프로젝트 루트 경로에 .env 파일을 생성하고 발급받은 API 키를 등록합니다.
 ```bash
-# GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 #### 3) 패지키 관리 도구를 통해 의존성을 설치합니다.
