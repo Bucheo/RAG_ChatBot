@@ -23,7 +23,7 @@
 - **Validation / Schema**: Pydantic
 - **Environment**: `python-dotenv`
 - **Vector DB**: Chroma DB
-- **문서 처리 / RAG 연동**: LangChain, PyPDF
+- **문서 처리 / RAG 연동**: LangChain
 - **Backend / UI 연동 대상**: FastAPI, Streamlit
 
 ---
