@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* iLovePDF 스타일을 참고한 브랜드 컬러 토큰 정의 (Tailwind v4 CSS 테마) */
+@theme {
+  --font-sans: "Noto Sans KR", "Pretendard", system-ui, sans-serif;
+
+  --color-brand-50: #fef2f1;
+  --color-brand-100: #fde3e1;
+  --color-brand-200: #fbccc8;
+  --color-brand-300: #f7a8a1;
+  --color-brand-400: #f17a70;
+  --color-brand-500: #e8493c; /* iLovePDF 시그니처 레드 */
+  --color-brand-600: #d43326;
+  --color-brand-700: #b2281d;
+  --color-brand-800: #93241c;
+  --color-brand-900: #7a231d;
+
+  --color-ink-50: #f7f8fa;
+  --color-ink-100: #eef0f3;
+  --color-ink-200: #dfe3e8;
+  --color-ink-300: #c3cad3;
+  --color-ink-400: #98a2b0;
+  --color-ink-500: #707b8b;
+  --color-ink-600: #545e6e;
+  --color-ink-700: #3d4553;
+  --color-ink-800: #262c36;
+  --color-ink-900: #14171d;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-900);
+}
+
+/* 채팅/문서 패널 전용 얇은 스크롤바 */
+.thin-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-ink-300);
+  border-radius: 9999px;
+}
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}

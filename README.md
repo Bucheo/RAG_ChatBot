@@ -60,6 +60,21 @@ python -m pip install -r req.txt
 - **전체 연동 테스트**: Streamlit 앱 또는 `app.py` 실행
 - **RAG 연동 환경**: 데이터시트 청킹 및 벡터 검색 파이프라인 연결 후 통합 테스트 진행
 
+### 5) 프론트엔드 실행 (`frontend/`)
+
+로그인/회원가입/마이페이지, 데이터시트 업로드, 채팅 UI를 담당하는 React 프론트엔드입니다.
+자세한 내용은 [`frontend/README.md`](frontend/README.md) 참고.
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+> ⚠️ 아직 팀 RAG 백엔드(FastAPI)가 없어서, 문서 분석/답변 로직은 프론트 내부 목업(`frontend/src/lib/embeddings.ts`, `llmClient.ts`)으로 동작합니다.
+> `ai.py`의 Pydantic 응답 스키마(`answer`, `sources[].page`)에 맞춰 FastAPI 엔드포인트가 나오면 이 두 파일만 실제 API 호출로 교체하면 됩니다.
+> 로그인/회원가입/마이페이지는 프론트에 포함된 자체 인증 서버(`frontend/server/`, Express + bcrypt + JWT)로 이미 동작합니다.
+
 ---
 
 ## 4. 시스템 아키텍처 및 핵심 포인트
